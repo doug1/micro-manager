@@ -2,6 +2,7 @@
 /*
  * micro-manager
  * Amazon EC2 t1.micro CPU manager
+ * https://github.com/doug1/micro-manager
  *
  * Copyright (C) 2013 Doug Mitchell
  *
@@ -41,7 +42,7 @@
 /**********************************************************************/
 
 #define SCHED_QUANTUM_NS (100 * 1000 * 1000)
-#define JIFFIES_PER_SEC (100)
+#define JIFFIES_PER_SEC (sysconf(_SC_CLK_TCK))
 #define MAX_PRIORITY (-10)
 #define PIDLIST_SIZE (1024)
 
